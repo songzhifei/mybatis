@@ -67,12 +67,13 @@
             url:"../api/user/login",
             data:{userName:userName,password:password},
             success:function (res) {
+                console.log(res)
                 if(res.code == 200){
                     location.href="../Home/Index";
                 }else{
                     alert("用户名或密码错误！");
                 }
-                console.log(res)
+
             }
         })
     })

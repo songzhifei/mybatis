@@ -8,15 +8,19 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.annotations.ApiIgnore;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @RestController
 @SpringBootApplication
 @ServletComponentScan
 // mapper 接口类扫描包配置
 @MapperScan("org.springboot.mybatis.dao")
+@EnableSwagger2
 public class MybatisApplication extends SpringBootServletInitializer {
 
     @RequestMapping("/home")
+    @ApiIgnore
     public String home(){
         return "hello world";
     }
