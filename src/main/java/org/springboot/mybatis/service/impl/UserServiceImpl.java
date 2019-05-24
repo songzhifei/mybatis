@@ -22,4 +22,9 @@ public class UserServiceImpl implements UserService {
     public List<User> findAll() {
         return userDao.findAll();
     }
+
+    @Override
+    public int insertUser(User user) {
+        return userDao.insert(user);
+    }
 }

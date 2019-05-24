@@ -1,4 +1,4 @@
-package org.springboot.mybatis.controller;
+package org.springboot.mybatis.controller.Rest;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -16,6 +16,7 @@ import java.util.List;
  * Created by bysocket on 07/02/2017.
  */
 @RestController
+@RequestMapping(value = "/api/city")
 @Api("CityController相关接口")
 public class CityRestController {
 

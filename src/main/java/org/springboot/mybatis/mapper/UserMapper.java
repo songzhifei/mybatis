@@ -28,11 +28,11 @@ public interface UserMapper {
      */
     @Insert({
         "insert into user (id, user_name, ",
-        "password, latest_update, ",
-        "is_del)",
+        "email, password, ",
+        "latest_update, is_del)",
         "values (#{id,jdbcType=BIGINT}, #{userName,jdbcType=VARCHAR}, ",
-        "#{password,jdbcType=VARCHAR}, #{latestUpdate,jdbcType=TIMESTAMP}, ",
-        "#{isDel,jdbcType=BIT})"
+        "#{email,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, ",
+        "#{latestUpdate,jdbcType=TIMESTAMP}, #{isDel,jdbcType=BIT})"
     })
     int insert(User record);
 
@@ -52,7 +52,7 @@ public interface UserMapper {
      */
     @Select({
         "select",
-        "id, user_name, password, latest_update, is_del",
+        "id, user_name, email, password, latest_update, is_del",
         "from user",
         "where id = #{id,jdbcType=BIGINT}"
     })
@@ -76,6 +76,7 @@ public interface UserMapper {
     @Update({
         "update user",
         "set user_name = #{userName,jdbcType=VARCHAR},",
+          "email = #{email,jdbcType=VARCHAR},",
           "password = #{password,jdbcType=VARCHAR},",
           "latest_update = #{latestUpdate,jdbcType=TIMESTAMP},",
           "is_del = #{isDel,jdbcType=BIT}",
