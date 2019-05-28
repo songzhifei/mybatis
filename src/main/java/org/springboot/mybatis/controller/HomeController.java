@@ -10,6 +10,7 @@ import springfox.documentation.annotations.ApiIgnore;
 public class HomeController {
     @RequestMapping(value = "/Index")
     public String Index(){
-        return "Home/Index";
+        //return "Home/Index";
+        return "Home/HomePage";
     }
 }

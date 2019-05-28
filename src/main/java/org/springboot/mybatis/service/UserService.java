@@ -1,6 +1,6 @@
 package org.springboot.mybatis.service;
 
-import org.springboot.mybatis.domain.User;
+import com.github.pagehelper.PageInfo;
 
 import java.util.List;
 
@@ -10,4 +10,6 @@ public interface UserService {
     List<User> findAll();
 
     int insertUser(User user);
+
+    PageInfo findUserByPage(int pageNum,int pageSize);
 }

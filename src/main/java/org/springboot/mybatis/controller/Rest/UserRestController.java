@@ -1,8 +1,11 @@
 package org.springboot.mybatis.controller.Rest;
 
+import com.github.pagehelper.PageInfo;
 import org.springboot.mybatis.common.CommonResult;
-import org.springboot.mybatis.domain.User;
+import org.springboot.mybatis.common.jqGridResult;
+import org.springboot.mybatis.domain.MpUser;
 import org.springboot.mybatis.dto.UserParams;
+import org.springboot.mybatis.service.MpUserService;
 import org.springboot.mybatis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +17,8 @@ import java.util.Date;
 public class UserRestController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private MpUserService mpUserService;
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public CommonResult<User> verifyLogin(@RequestParam(value = "userName", required = true) String userName, @RequestParam(value = "password", required = true) String password){
@@ -58,6 +63,13 @@ public class UserRestController {
             return CommonResult.failed("用户名不能为空!");
         }
 
+    }
+    @RequestMapping(value = "/getList",method = RequestMethod.GET)
+    public jqGridResult<MpUser> findUserByPage(@RequestParam(value = "page",required = true) int page,@RequestParam(value = "rows",required = true) int rows){
+        PageInfo<MpUser> pageInfo= mpUserService.GetList(page,rows);
+        jqGridResult<MpUser> jqGridResult = org.springboot.mybatis.common.jqGridResult.success(pageInfo.getList(),pageInfo.getPages(),pageInfo.getTotal(),pageInfo.getPageNum(),"");
+        //CommonResult<PageInfo<MpUser>> pageInfoCommonResult = CommonResult.success(pageInfo);
+        return jqGridResult;
     }
 
 

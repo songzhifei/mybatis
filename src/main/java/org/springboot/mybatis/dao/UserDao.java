@@ -1,7 +1,6 @@
 package org.springboot.mybatis.dao;
 
 import org.apache.ibatis.annotations.Param;
-import org.springboot.mybatis.domain.User;
 import org.springboot.mybatis.mapper.UserMapper;
 
 import java.util.List;

@@ -1,8 +1,6 @@
 package org.springboot.mybatis.service.impl;
 import org.springboot.mybatis.dao.CityDao;
 import org.springboot.mybatis.dao.UserDefindDao;
-import org.springboot.mybatis.domain.City;
-import org.springboot.mybatis.mapper.CityMapper;
 import org.springboot.mybatis.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
