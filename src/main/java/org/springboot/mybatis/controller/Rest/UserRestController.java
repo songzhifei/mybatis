@@ -4,6 +4,7 @@ import com.github.pagehelper.PageInfo;
 import org.springboot.mybatis.common.CommonResult;
 import org.springboot.mybatis.common.jqGridResult;
 import org.springboot.mybatis.domain.MpUser;
+import org.springboot.mybatis.domain.User;
 import org.springboot.mybatis.dto.UserParams;
 import org.springboot.mybatis.service.MpUserService;
 import org.springboot.mybatis.service.UserService;

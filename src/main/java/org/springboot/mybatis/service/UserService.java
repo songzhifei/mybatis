@@ -1,6 +1,7 @@
 package org.springboot.mybatis.service;
 
 import com.github.pagehelper.PageInfo;
+import org.springboot.mybatis.domain.User;
 
 import java.util.List;
 

@@ -1,6 +1,8 @@
 package org.springboot.mybatis.service;
 
 
+import org.springboot.mybatis.domain.City;
+
 import java.util.List;
 
 /**

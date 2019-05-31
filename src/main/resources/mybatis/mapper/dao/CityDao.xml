@@ -20,7 +20,6 @@
     select * from city
     where city_name = #{cityName}
   </select>
-
     <select id="findAll" resultMap="BaseResultMap">
     select * from city
   </select>

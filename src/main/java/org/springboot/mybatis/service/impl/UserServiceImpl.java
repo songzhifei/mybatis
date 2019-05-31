@@ -3,6 +3,7 @@ package org.springboot.mybatis.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springboot.mybatis.dao.UserDao;
+import org.springboot.mybatis.domain.User;
 import org.springboot.mybatis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

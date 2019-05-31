@@ -1,6 +1,7 @@
 package org.springboot.mybatis.dao;
 
 import org.apache.ibatis.annotations.Param;
+import org.springboot.mybatis.domain.City;
 
 public interface UserDefindDao {
     /**

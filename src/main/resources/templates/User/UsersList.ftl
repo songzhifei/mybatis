@@ -1,53 +1,57 @@
-<style>
-    html, body {
-        height: 100%;
-        width: 100%;
-    }
 
-    .row-input-text {
-        border: none;
-    }
+<#include "../base/layout-test.ftl">
 
-    .active .row-input-text {
-        background-color: #f5f5f5;
-    }
-
-    .success .row-input-text {
-        background-color: #fff6e5;
-    }
-
-    .multi-line {
-        white-space: normal !important;
-        height: auto !important;
-        vertical-align: text-top !important;
-        padding-top: 9px !important;
-        padding-bottom: 9px !important;
-        line-height: 1em !important;
-        word-break: break-all;
-    }
-    .ui-jqgrid .ui-jqgrid-toppager .ui-pager-control, .ui-jqgrid .ui-jqgrid-pager .ui-pager-control{
-        height: 30px;
-    }
-    table{
-        font-size: 10px;
-    }
-    .gridToolbar form{
-        margin-bottom: auto;
-    }
-</style>
+<@layout>
     <style>
-        @media (max-width: 768px) {
-            .ui-jqgrid .ui-jqgrid-pager .navtable {
-                display: none !important;
-            }
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
 
-            .ui-jqgrid .ui-jqgrid-pager .ui-paging-info {
-                display: none !important;
-            }
+        .row-input-text {
+            border: none;
+        }
+
+        .active .row-input-text {
+            background-color: #f5f5f5;
+        }
+
+        .success .row-input-text {
+            background-color: #fff6e5;
+        }
+
+        .multi-line {
+            white-space: normal !important;
+            height: auto !important;
+            vertical-align: text-top !important;
+            padding-top: 9px !important;
+            padding-bottom: 9px !important;
+            line-height: 1em !important;
+            word-break: break-all;
+        }
+        .ui-jqgrid .ui-jqgrid-toppager .ui-pager-control, .ui-jqgrid .ui-jqgrid-pager .ui-pager-control{
+            height: 30px;
+        }
+        table{
+            font-size: 10px;
+        }
+        .gridToolbar form{
+            margin-bottom: auto;
         }
     </style>
+    <style>
+    @media (max-width: 768px) {
+        .ui-jqgrid .ui-jqgrid-pager .navtable {
+            display: none !important;
+        }
 
-<div class="gridToolbar">
+        .ui-jqgrid .ui-jqgrid-pager .ui-paging-info {
+            display: none !important;
+        }
+    }
+</style>
+
+    <div class="gridToolbar">
     <form class="form-inline">
         <div class="form-group">
             <label for="txt_verifyState">认证状态</label>
@@ -65,7 +69,7 @@
     </form>
 </div>
 
-<div class="contextMenu" id="contextMenu" style="display:none">
+    <div class="contextMenu" id="contextMenu" style="display:none">
     <ul style="width: 300px; font-size: 65%;">
         <li id="menu-view">
             <span><i class="fa fa-lg fa-search-plus"></i> 查看</span>
@@ -76,23 +80,12 @@
     </ul>
 </div>
 
-<div class="gridPanel">
+    <div class="gridPanel">
     <table id="gridList"></table>
     <div id="gridPager"></div>
 </div>
+</@layout>
 
-<link href="../Content/css/framework-theme.css" rel="stylesheet" />
-<link href="../Content/js/bootstrap/bootstrap.min.css" rel="stylesheet" />
-<link href="../Content/css/framework-ui.css" rel="stylesheet" />
-<link href="../Content/js/jqgrid/jqgrid.css" rel="stylesheet" />
-
-<script src="../Content/js/jquery/jquery-2.1.1.min.js"></script>
-<script src="../Content/js/jquery/jquery-2.1.1.min.js"></script>
-<script src="../Content/js/bootstrap/bootstrap.js"></script>
-<script src="../Content/js/framework-ui.js"></script>
-<script src="../Content/js/ContextMenu/context-menu.js"></script>
-<script src="../Content/js/jqgrid/jquery.jqGrid.min.js"></script>
-<script src="../Content/js/jqgrid/grid.locale-cn.js"></script>
 <script type="text/javascript">
     function btn_details() {
         var keyValue = $("#gridList").jqGridSelectedRowValue().UserName;
